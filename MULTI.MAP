@@ -1,0 +1,25 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00015H 00016H _TEXT              CODE
+ 00016H 0001AH 00005H _DATA              DATA
+ 00020H 0011FH 00100H STACK              STACK
+
+Detailed map of segments
+
+0000:0000 0016 C=CODE S=_TEXT G=(none) M=MULTI.ASM ACBP=48
+0001:0006 0005 C=DATA S=_DATA G=DGROUP M=MULTI.ASM ACBP=48
+0002:0000 0100 C=STACK S=STACK G=DGROUP M=MULTI.ASM ACBP=74
+
+  Address         Publics by Name
+
+
+  Address         Publics by Value
+
+
+Line numbers for mULTI.obj(MULTI.ASM) segment _TEXT
+
+    21 0000:0000    22 0000:0003    23 0000:0005    24 0000:0008
+    25 0000:000C    27 0000:000F    28 0000:0011    29 0000:0014
+Program entry point at 0000:0000
+

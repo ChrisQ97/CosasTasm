@@ -1,0 +1,26 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 00017H 00018H _TEXT              CODE
+ 00018H 0001BH 00004H _DATA              DATA
+ 00020H 0011FH 00100H STACK              STACK
+
+Detailed map of segments
+
+0000:0000 0018 C=CODE S=_TEXT G=(none) M=PRIMERO.ASM ACBP=48
+0001:0008 0004 C=DATA S=_DATA G=DGROUP M=PRIMERO.ASM ACBP=48
+0002:0000 0100 C=STACK S=STACK G=DGROUP M=PRIMERO.ASM ACBP=74
+
+  Address         Publics by Name
+
+
+  Address         Publics by Value
+
+
+Line numbers for pRIMERO.obj(PRIMERO.ASM) segment _TEXT
+
+    24 0000:0000    25 0000:0003    27 0000:0005    28 0000:0008
+    29 0000:000C    30 0000:000E    33 0000:0011    34 0000:0013
+    35 0000:0016
+Program entry point at 0000:0000
+

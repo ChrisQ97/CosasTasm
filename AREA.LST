@@ -1,0 +1,96 @@
+Turbo Assembler	 Version 3.0	    09/26/18 23:01:39	    Page 1
+AREA.asm
+
+
+
+      1
+      2				     ideal
+      3				     dosseg
+      4	0000			     model small
+      5	0000			     stack 256
+      6				     ;****** VARIABLES DEL PROGRAMA ****************************
+      7	0100			     dataseg
+      8	0000  00		     codsal db 0
+      9	0001			     const  db 2
+**Error** AREA.asm(9) Extra characters on line
+     10	0000  ??		     base db ?
+     11	0001  ??		     altura db ?
+     12	0002  ????		     area dw ?
+     13				     ;****** CÓDIGO DEL PROGRAMA *******************************
+     14	0004			     codeseg
+     15	0000			     inicio:
+     16	0000  B8 0000s		      mov ax, @data
+     17	0003  8E D8		      mov ds, ax
+     18	0005  A0 0000r		      mov al, [base]
+     19	0008  F6 26 0001r	      mul [altura]
+     20	000C  A3 0002r		      mov [area], ax
+     21	000F  B4 09		      mov ah,09h
+     22	0011  BA 0000		     lea dx,msj6 ;desplegar div
+**Error** AREA.asm(22) Undefined symbol: MSJ6
+*Warning* AREA.asm(22) Pointer expression needs	brackets
+     23	0014  CD 21		     int 21h
+     24	0016  33 C0		     xor ax,ax ;limpiamos el registro ax.
+     25	0018  B0 00		     mov al,const
+**Error** AREA.asm(25) Not expecting group or segment quantity
+     26	001A  8A D8		     mov bl,al
+     27	001C  A1 0002r		     mov al,area
+*Warning* AREA.asm(27) Pointer expression needs	brackets
+**Error** AREA.asm(27) Operand types do	not match
+     28	001F  F6 F3		     div bl ;
+     29
+     30	0021			     salir:
+     31	0021  B4 4C		      mov ah, 04Ch
+     32	0023  A0 0000r		      mov al, [codsal]
+     33	0026  CD 21		      int 21h
+     34				     ;****** CÓDIGO DE	TERMINACIÓN *****************************
+     35				      end inicio
+Turbo Assembler	 Version 3.0	    09/26/18 23:01:39	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "09/26/18"
+??FILENAME			  Text	 "AREA	  "
+??TIME				  Text	 "23:01:39"
+??VERSION			  Number 0300
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 AREA
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+ALTURA				  Byte	 DGROUP:0001
+AREA				  Word	 DGROUP:0002
+BASE				  Byte	 DGROUP:0000
+CODSAL				  Byte	 DGROUP:0000
+INICIO				  Near	 _TEXT:0000
+SALIR				  Near	 _TEXT:0021
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  CONST				  16  0004 Word	  Public  DATA
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0001 Word	  Public  DATA
+_TEXT				  16  0028 Word	  Public  CODE
+Turbo Assembler	 Version 3.0	    09/26/18 23:01:39	    Page 3
+Error Summary
+
+
+
+**Error** AREA.asm(9) Extra characters on line
+**Error** AREA.asm(22) Undefined symbol: MSJ6
+*Warning* AREA.asm(22) Pointer expression needs	brackets
+**Error** AREA.asm(25) Not expecting group or segment quantity
+*Warning* AREA.asm(27) Pointer expression needs	brackets
+**Error** AREA.asm(27) Operand types do	not match
+

@@ -1,0 +1,26 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 0001CH 0001DH _TEXT              CODE
+ 0001EH 00023H 00006H _DATA              DATA
+ 00030H 0012FH 00100H STACK              STACK
+
+Detailed map of segments
+
+0000:0000 001D C=CODE S=_TEXT G=(none) M=AREAT.ASM ACBP=48
+0001:000E 0006 C=DATA S=_DATA G=DGROUP M=AREAT.ASM ACBP=48
+0003:0000 0100 C=STACK S=STACK G=DGROUP M=AREAT.ASM ACBP=74
+
+  Address         Publics by Name
+
+
+  Address         Publics by Value
+
+
+Line numbers for aREAT.obj(AREAT.ASM) segment _TEXT
+
+    22 0000:0000    23 0000:0003    24 0000:0005    25 0000:0008
+    26 0000:000C    28 0000:000F    29 0000:0013    32 0000:0016
+    33 0000:0018    34 0000:001B
+Program entry point at 0000:0000
+
